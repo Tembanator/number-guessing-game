@@ -1,4 +1,5 @@
 // get elements
+let title = document.querySelector('.title')
 const submit_btn = document.getElementById('submit-btn')
 const guess = document.getElementById('number-input')
 const error_msg = document.querySelector('.error-msg p')
@@ -16,7 +17,7 @@ let interaction_area = document.querySelector('.interaction-area')
 
 let attempted_numbers = 0
 let guessed_accumulative = []
-let heat_of_guess = document.querySelector('#high-or-low p')
+let heat_of_guess = document.querySelector('.heat-of-guess p')
 let attempts = document.querySelector('#attempts p .value')
 let guessed_list = document.querySelector('#guessed-list p .value')
 let complete_list = ''
@@ -52,6 +53,12 @@ function create_boxes() {
             box.innerHTML = random_numbers[index]
         }
     })
+
+    title.classList.add('title-animated')
+    boxes.forEach(box=> {
+        box.parentElement.classList.add('box-animated')
+    })
+
     attempts.innerHTML = '0'
 }
 
@@ -114,6 +121,7 @@ function validateGuess() {
                         attempts.innerHTML = guessed_accumulative.length
 
                         guessed_list.innerHTML = guessed_accumulative.join(", ")
+                        // error_msg.innerHTML = 'Try another number'
 
                         if (guessed_accumulative.length > 4) {
                             // reveal lost panel panel and hide box area

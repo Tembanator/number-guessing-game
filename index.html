@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/main.css">
 
 
-    <title>Hello, world!</title>
+    <title>Guessing Game</title>
 </head>
 
 <body onload="create_boxes()">
@@ -31,7 +31,7 @@
                     <h1 class="my-5 text-center title">Number Guessing Game</h1>
                 </div>
             </div>
-            <div class="row justify-content-center" id="game-verdict-area">
+            <div class="row justify-content-center animate-box" id="game-verdict-area">
                 <div class="col-md-10">
                     <div class="verdict-panel won text-center bg-success p-1 d-none">
                         <h2 class="display3 my-1">Congrats, you have won.</h2>
@@ -78,6 +78,10 @@
                     <div class="input-area text-center">
 
                         <div class="error-msg ">
+                            <p class="lead d-none text-danger">Please enter a number</p>
+                        </div>
+
+                        <div class="heat-of-guess">
                             <p class="lead d-none">Please enter a number</p>
                         </div>
 
@@ -92,13 +96,13 @@
                 <div class="col-sm-6 py-5">
                     <div class="feedback-area">
                         <div id="attempts">
-                            <p class="lead"><span class="value">0</span> / 5 attempts</p>
+                            <p class="lead"><span class="value fw-bold">0</span> / 5 attempts</p>
                         </div>
                         <div id="high-or-low">
                             <!-- <p class="lead">Your guess is too high</p> -->
                         </div>
                         <div id="guessed-list">
-                            <p class="lead">Guessed numbers: <span class="value"></span></p>
+                            <p class="lead">Guessed numbers: <span class="value fw-bold"></span></p>
                         </div>
                     </div>
                 </div>
