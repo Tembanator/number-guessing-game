@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #6441A5;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2a0845, #6441A5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2a0845, #6441A5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color     : whitesmoke;
+    overflow-x: hidden;
+    section {
+        position: relative;
+
+        .overlay {
+            position       : absolute;
+            flex-direction : column;
+            justify-content: space-around;
+            top            : 0;
+            left           : 0;
+            opacity        : .05;
+            z-index        : -4;
+
+            h1 {
+                font-size: 120px;
+            }
+        }
+
+        .title {}
+
+        #game-verdict-area {
+            .verdict-panel {
+                .btn {
+                    font-weight: bold;
+                    i {
+                        color: #6441A5;
+                    }
+                }
+                border-radius: 5px;
+                &.won {
+
+                }
+            } 
+        }
+
+        #box-area {
+            .box {
+                border-radius: 5px;
+                max-width    : 60%;
+
+                .number {
+                    color: #6441A5;
+                }
+            }
+        }
+        .input-area {
+                .error-msg {
+
+                }
+    
+                input {
+                    padding    : 15px;
+                    font-size  : 40px;
+                    font-weight: bold;
+                    text-align : center;
+                    width      : 170px;
+                    margin: 20px auto;
+    
+                    @media only screen and (min-width: 576px) {
+                        width: 130px;
+                        padding    : 10px;
+                    }
+    
+                    ::placeholder {
+                        color: #6441A5;
+                    }
+                }
+                .btn {
+                    width: 170px;
+                    font-weight: bold;
+                    @media only screen and (min-width: 576px) {
+                        width: 130px;
+                        padding    : 10px;
+                    }
+                }
+        }
+        
+    }
+
+}
